@@ -50,6 +50,10 @@ if (sensorState == HIGH && lastState == LOW){
   digitalWrite(SHUTTER,HIGH);
   lcd.setCursor(0,0);
   lcd.print(count++);
+  digitalWrite(LED,LOW);
+  digitalWrite(EMG,LOW);
+  delay(100);
+  digitalWrite(SHUTTER,LOW);
 }
 
 else
